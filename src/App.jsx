@@ -1,7 +1,10 @@
 import React from 'react';
 
 function App() {
-
+  /*
+  TODO:
+  []test responsiveness on mobile
+  */
   return (
     <main>
       <header className='container--padding-util'>

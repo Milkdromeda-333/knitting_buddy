@@ -7,12 +7,13 @@
 :root {
   --font-decor: 'Press Start 2P', cursive;
   --purple: #9370DB;
+  --pink: #f5a4f3;
   --container-padding: 20px;
 }
 
 body {
   font-family: var(--font-decor);
-  background-color: pink;
+  background-color: var(--pink);
   color: white;
   padding: 0;
   margin: 0;
@@ -50,9 +51,19 @@ header h1 {
   color: var(--purple);
 }
 
+header h1:hover {
+  color: white;
+  -webkit-text-stroke: 1px var(--purple);
+}
+
 .brand {
   display: flex;
   flex-direction: column;
+}
+
+.brand--star {
+  width: 10%;
+  padding: 0;
 }
 
 /* HEADER: media queries */
@@ -97,7 +108,7 @@ header h1 {
   flex-direction: column;
 }
 
-@media screen and (max-width: 910px) {
+@media screen and (max-width: 969px) {
 
   .intro {
     flex-direction: column;
