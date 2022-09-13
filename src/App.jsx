@@ -22,6 +22,25 @@ function App() {
           <span className="image--caption-util">Illustration by <a href="https://icons8.com/illustrations/author/kP9rc8JiBCcz">Irene M. Ray</a> from <a href="https://icons8.com/illustrations">Ouch!</a></span>
         </div>
       </section>
+
+      <section className="knitting-buddy container--padding-util">
+        <div className="canvas"></div>
+
+        <form>
+          <label htmlFor="patternReminder">
+            Pattern reminder?
+          </label>
+          <input type="text" name='patternReminder' id='patternReminder' placeholder='purl 2 knit 2' />
+
+
+          <label htmlFor="intervals">
+            Interval?
+          </label>
+          <input type="number" name='intervals' id='intervals' placeholder='2' min='2' />
+
+          <button>Lets begin!</button>
+        </form>
+      </section>
     </main>
   );
 }

@@ -8,13 +8,15 @@
   --font-decor: 'Press Start 2P', cursive;
   --purple: #9370DB;
   --pink: #f5a4f3;
+  --white: ivory;
+  --yellow: #FFFF00;
   --container-padding: 20px;
 }
 
 body {
   font-family: var(--font-decor);
   background-color: var(--pink);
-  color: white;
+  color: var(--white);
   padding: 0;
   margin: 0;
 }
@@ -31,7 +33,7 @@ a {
 
 
 .image--caption-util {
-  font-size: 7px;
+  font-size: 6px;
 }
 
 /*  HEADER */
@@ -80,6 +82,7 @@ header h1:hover {
   display: flex;
   flex-direction: row-reverse;
   border-top: 3px solid #9470db31;
+  border-bottom: 3px solid #9470db31;
   justify-content: space-evenly;
   align-items: center;
 
@@ -95,7 +98,8 @@ header h1:hover {
 }
 
 .intro--important:hover {
-  font-size: 17px;
+  font-size: 16px;
+  color: var(--yellow);
 }
 
 .intro p {
@@ -106,6 +110,7 @@ header h1:hover {
 .img-1 {
   display: flex;
   flex-direction: column;
+  padding: 10px;
 }
 
 @media screen and (max-width: 969px) {
@@ -123,5 +128,74 @@ header h1:hover {
 
   header {
     justify-content: center;
+  }
+}
+
+/* the knitting buddy */
+.knitting-buddy {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+
+  height: 100vh;
+}
+
+.canvas {
+  height: 80%;
+  width: 50%;
+  border-radius: 20px;
+  background-color: var(--white);
+}
+
+/* form */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  outline: 2px solid var(--purple);
+  border-radius: 8px;
+  width: 300px;
+  height: 30px;
+  margin: 10px 0px 20px;
+  font-family: inherit;
+  padding: 10px;
+}
+
+input:focus {
+  outline: 2px solid var(--yellow);
+}
+
+form button {
+  width: 50%;
+  background-color: var(--purple);
+  color: var(--white);
+  font-family: inherit;
+  border-radius: 8px;
+  padding: 5px;
+  margin: 0 auto;
+  border: none;
+}
+
+form button:hover {
+  outline: 3px solid var(--yellow);
+  color: var(--yellow);
+}
+
+.canvas {
+  margin-right: 10px;
+}
+
+/* form: media queries */
+@media screen and (max-width: 958px) {
+  .knitting-buddy {
+    flex-direction: column-reverse;
+  }
+
+  .canvas {
+    width: 80%;
+    height: 50%;
   }
 }
